@@ -9,6 +9,7 @@ from qgis.core import (
     QgsProject, QgsRectangle, QgsCoordinateReferenceSystem, QgsCoordinateTransform
 )
 from qgis.utils import iface
+from .logger import Logger
 
 # Extensión geográfica optimizada de Ecuador en WGS 84 (EPSG:4326)
 ECUADOR_EXTENT_4326 = QgsRectangle(-84.40413, -6.68110, -71.87426, 2.84844)
@@ -27,10 +28,13 @@ def set_project_crs_and_zoom_to_ecuador(force_crs=True, force_zoom=True):
 
     # 2. Ajustar extensión del mapa centrada en Ecuador
     if iface and force_zoom:
-        canvas = iface.mapCanvas()
-        canvas.setDestinationCrs(crs_4326)
-        canvas.setExtent(ECUADOR_EXTENT_4326)
-        canvas.refresh()
+        try:
+            canvas = iface.mapCanvas()
+            canvas.setDestinationCrs(crs_4326)
+            canvas.setExtent(ECUADOR_EXTENT_4326)
+            canvas.refresh()
+        except Exception as err:
+            Logger.warning(f"No se pudo ajustar la extensión del lienzo: {err}")
 
 def zoom_to_ecuador(force=False):
     """
@@ -55,8 +59,9 @@ def get_or_create_top_group(group_name):
                 root.insertChildNode(0, clone)
                 root.removeChildNode(group)
                 group = clone
-        except Exception:
-            pass
+        except (ValueError, IndexError, Exception) as err:
+            Logger.warning(f"Información al ordenar grupo '{group_name}': {err}")
+            
     return group
 
 def add_layer_to_top_group(layer, group_name):
