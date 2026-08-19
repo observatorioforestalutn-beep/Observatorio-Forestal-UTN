@@ -3,8 +3,9 @@
 Plugin Institucional: Observatorio Forestal UTN
 Universidad Técnica del Norte (UTN) — Ecuador
 Autor: PhD. Oscar Hernando Eraso Terán (Docente Investigador)
-Email: oheraso@utn.edu.ec
+Email: observatorioforestalutn@gmail.com, oheraso@utn.edu.ec
 Sitio web: https://observatorioforestal.utn.edu.ec/
+Repositorio: https://github.com/observatorioforestalutn-beep/Observatorio-Forestal-UTN
 """
 
 from .main_plugin import ObservatorioForestalUTNPlugin

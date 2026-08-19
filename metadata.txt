@@ -2,24 +2,24 @@
 name=Observatorio Forestal UTN
 qgisMinimumVersion=3.10
 qgisMaximumVersion=4.99
-description=Plugin institucional del Observatorio Forestal UTN de la Universidad Técnica del Norte (Ecuador) para el Monitoreo y Gestión Forestal.
-about=Herramientas especializadas del Observatorio Forestal UTN para el Monitoreo y Gestión de incendios (NASA FIRMS) y mapas base.
+description=Institutional QGIS plugin of the UTN Forest Observatory (Universidad Técnica del Norte - Ecuador) for forest monitoring and wildfire management.
+about=Specialized tools from the UTN Forest Observatory for active wildfire monitoring (NASA FIRMS) and high-resolution base maps.
     .
-    Proporciona un ecosistema ágil y totalmente nativo para el monitoreo y gestion de incendios forestales:
+    Provides an agile and fully native geospatial ecosystem for forest and wildfire management:
     .
-    🔥 Incendios Activos: Carga en 1 clic de focos de calor en tiempo real (NASA FIRMS MODIS y VIIRS) con simbología térmica temporal oficial y auto-refresco dinámico cada 5 minutos.
+    🔥 Active Wildfires: 1-click loading of near real-time thermal hotspots (NASA FIRMS MODIS and VIIRS) with official NASA temporal symbology, auto-reprojection to EPSG:4326, automatic Ecuador framing, and dynamic 5-minute background auto-refresh.
     .
-    🗺️ Imágenes Base: Acceso instantáneo a capas satelitales y cartografía base de alta resolución (Google Hybrid, Google Road, Bing Satellite, OSM Standard y OpenTopoMap).
+    🗺️ Base Maps: Instant access to high-resolution satellite imagery and cartographic base layers (Google Hybrid, Google Road, Bing Satellite, OSM Standard, and OpenTopoMap) automatically placed at the bottom of the layer stack.
     .
-    🌐 Visita nuestra plataforma web oficial: https://observatorioforestal.utn.edu.ec/
-version=1.0.0
-author=PhD. Oscar Hernando Eraso Terán (Docente Investigador — Universidad Técnica del Norte, Ecuador)
-email=oheraso@utn.edu.ec
+    🌐 Visit our official web platform: https://observatorioforestal.utn.edu.ec/
+version=1.0.1
+author=PhD. Oscar Hernando Eraso Terán (Research Professor — Universidad Técnica del Norte, Ecuador)
+email=observatorioforestalutn@gmail.com, oheraso@utn.edu.ec
 homepage=https://observatorioforestal.utn.edu.ec/
 repository=https://github.com/observatorioforestalutn-beep/Observatorio-Forestal-UTN
 tracker=https://github.com/observatorioforestalutn-beep/Observatorio-Forestal-UTN/issues
-category=Monitoreo y Gestión Forestal, Raster, Vector, Web, Database
-tags=Observatorio Forestal UTN, Incendios, FIRMS, Imbabura, Ecuador, Monitoreo y Gestión Forestal
+category=Raster, Vector, Web, Database
+tags=forest observatory utn, wildfires, fire, firms, remote sensing, satellite, ecuador, imbabura, forest management
 icon=icons/icon.png
 experimental=False
 deprecated=False
