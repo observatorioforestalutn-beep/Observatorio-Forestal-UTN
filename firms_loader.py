@@ -55,8 +55,8 @@ def enable_layer_auto_refresh(layer, minutes=AUTO_REFRESH_INTERVAL_MINUTES):
             interval_ms = int(minutes * 60 * 1000)
             layer.setAutoRefreshInterval(interval_ms)
             layer.setAutoRefreshEnabled(True)
-    except Exception:
-        pass
+    except Exception as err:
+        Logger.warning(f"No se pudo configurar auto-refresco en '{layer.name()}': {err}")
 
 def load_all_firms_with_symbology():
     Logger.info("Cargando capas NASA FIRMS...")

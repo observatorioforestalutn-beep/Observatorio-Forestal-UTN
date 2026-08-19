@@ -2,6 +2,7 @@
 """
 Simbología graduada térmica oficial NASA FIRMS para capas vectoriales de incendios.
 Mantiene las capas compactas (sin desplegar la lista de rangos en el panel de capas).
+Compatible con Qt6 / QGIS 4 y QGIS 3.
 """
 
 from qgis.core import (
@@ -51,7 +52,7 @@ def apply_nasa_firms_symbology(layer):
         range_list.append(qgs_range)
         
     renderer = QgsGraduatedSymbolRenderer(NASA_TIME_EXPRESSION, range_list)
-    renderer.setMode(QgsGraduatedSymbolRenderer.Custom)
+    renderer.setMode(QgsGraduatedSymbolRenderer.Mode.Custom)
     
     layer.setRenderer(renderer)
     layer.setOpacity(0.95)

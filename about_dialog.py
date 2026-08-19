@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Diálogo institucional 'Acerca de' para el Observatorio Forestal UTN.
+Compatible con Qt6 / QGIS 4 y QGIS 3.
 """
 
 import os
@@ -13,19 +14,19 @@ class AboutDialog(QDialog):
         super().__init__(parent)
         self.setWindowTitle("Acerca del Observatorio Forestal UTN")
         self.setFixedSize(520, 460)
-        self.setWindowFlags(self.windowFlags() & ~Qt.WindowContextHelpButtonHint)
+        self.setWindowFlags(self.windowFlags() & ~Qt.WindowType.WindowContextHelpButtonHint)
 
         layout = QVBoxLayout(self)
         layout.setSpacing(12)
 
         # Logo Institucional
         logo_label = QLabel()
-        logo_label.setAlignment(Qt.AlignCenter)
+        logo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         current_dir = os.path.dirname(os.path.dirname(__file__))
         logo_path = os.path.join(current_dir, "icons", "logo_utn.png")
         if os.path.exists(logo_path):
             pix = QPixmap(logo_path)
-            logo_label.setPixmap(pix.scaledToWidth(360, Qt.TransformationMode.SmoothTransformation if hasattr(Qt, 'TransformationMode') else Qt.SmoothTransformation))
+            logo_label.setPixmap(pix.scaledToWidth(360, Qt.TransformationMode.SmoothTransformation))
         layout.addWidget(logo_label)
 
         # Texto Institucional
@@ -36,7 +37,7 @@ class AboutDialog(QDialog):
             "<p><b>Institución:</b> Universidad Técnica del Norte (UTN) — Ecuador</p>"
             "<p><b>Autor Responsable:</b> PhD. Oscar Hernando Eraso Terán<br>"
             "<span style='color: #555;'>Docente Investigador — Universidad Técnica del Norte</span></p>"
-            "<p><b>Contacto:</b> <a href='mailto:oheraso@utn.edu.ec'>oheraso@utn.edu.ec</a></p>"
+            "<p><b>Contacto:</b> <a href='mailto:observatorioforestalutn@gmail.com'>observatorioforestalutn@gmail.com</a> | <a href='mailto:oheraso@utn.edu.ec'>oheraso@utn.edu.ec</a></p>"
             "<p><b>Plataforma Web:</b> <a href='https://observatorioforestal.utn.edu.ec/'>https://observatorioforestal.utn.edu.ec/</a></p>"
             "<p><b>Repositorio GitHub:</b> <a href='https://github.com/observatorioforestalutn-beep/Observatorio-Forestal-UTN'>observatorioforestalutn-beep/Observatorio-Forestal-UTN</a></p>"
         )
