@@ -1,0 +1,25 @@
+[general]
+name=Observatorio Forestal UTN
+qgisMinimumVersion=3.10
+qgisMaximumVersion=4.99
+description=Plugin institucional del Observatorio Forestal UTN de la Universidad Técnica del Norte (Ecuador) para el Monitoreo y Gestión Forestal.
+about=Herramientas especializadas del Observatorio Forestal UTN para el Monitoreo y Gestión de incendios (NASA FIRMS) y mapas base.
+    .
+    Proporciona un ecosistema ágil y totalmente nativo para el monitoreo y gestion de incendios forestales:
+    .
+    🔥 Incendios Activos: Carga en 1 clic de focos de calor en tiempo real (NASA FIRMS MODIS y VIIRS) con simbología térmica temporal oficial y auto-refresco dinámico cada 5 minutos.
+    .
+    🗺️ Imágenes Base: Acceso instantáneo a capas satelitales y cartografía base de alta resolución (Google Hybrid, Google Road, Bing Satellite, OSM Standard y OpenTopoMap).
+    .
+    🌐 Visita nuestra plataforma web oficial: https://observatorioforestal.utn.edu.ec/
+version=1.0.0
+author=PhD. Oscar Hernando Eraso Terán (Docente Investigador — Universidad Técnica del Norte, Ecuador)
+email=oheraso@utn.edu.ec
+homepage=https://observatorioforestal.utn.edu.ec/
+repository=https://github.com/observatorioforestalutn-beep/Observatorio-Forestal-UTN
+tracker=https://github.com/observatorioforestalutn-beep/Observatorio-Forestal-UTN/issues
+category=Monitoreo y Gestión Forestal, Raster, Vector, Web, Database
+tags=Observatorio Forestal UTN, Incendios, FIRMS, Imbabura, Ecuador, Monitoreo y Gestión Forestal
+icon=icons/icon.png
+experimental=False
+deprecated=False
